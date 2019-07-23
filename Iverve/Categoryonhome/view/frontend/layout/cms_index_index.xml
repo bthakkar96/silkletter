@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<head>
+		<script src="Iverve_Categoryonhome::js/wow.js"/>
+	</head>
+    <body>
+		<referenceContainer name="content">		
+			<block class="Iverve\Categoryonhome\Block\Viewedd" name="recently" template="Iverve_Categoryonhome::recently.phtml" cacheable="false" />		
+			<block class="Iverve\Categoryonhome\Block\Category" name="recently_viewed1234" template="Iverve_Categoryonhome::recenly_viewed.phtml"></block>
+			<block class="Iverve\Categoryonhome\Block\Category" name="categoryonhomepage" template="Iverve_Categoryonhome::category.phtml"></block>
+			<block class="Iverve\Categoryonhome\Block\Category" name="brands_1" template="Iverve_Categoryonhome::brands.phtml"></block>
+		</referenceContainer>
+	</body>
+</page>

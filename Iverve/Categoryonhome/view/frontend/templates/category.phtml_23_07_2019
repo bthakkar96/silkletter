@@ -1,0 +1,66 @@
+<?php
+$categories = $this->getStoreCategories(true,false,true);
+$categoryHelper = $this->getCategoryHelper();
+
+?>
+	<div class="row" id="my-row">
+		
+			
+			<?php
+				foreach($categories as $category):
+					 if (!$category->getIsActive()) {
+						continue;
+					 }
+				?>
+				<div class ="col-xs-12 col-sm-6 col-md-4">
+				<div class="category_section panel <?php echo $category->getName() ?>">
+				<div class ="box_category">
+				<a class ="cat_name" href="<?php echo $categoryHelper->getCategoryUrl($category) ?>"><?php echo $category->getName() ?></a>
+				<?php  
+					if($childrenCategories = $this->getChildCategories($category)):
+					?>
+						<ul class="sub_cat_ul">
+						<?php
+						$cnt = 0;
+						foreach($childrenCategories as $childrenCategory):
+							
+							if (!$childrenCategory->getIsActive()) {
+								
+								continue;
+							 }
+							
+						?>
+						<li>
+							<a href="<?php echo $categoryHelper->getCategoryUrl($childrenCategory) ?>">
+								<?php 
+									echo $childrenCategory->getName(); 
+								?>
+							</a>
+						</li>
+						<?php 
+							$cnt++;
+							if($cnt == 6)
+							break; ?>
+						<?php
+						endforeach;
+						
+						?>
+						</ul>
+					<?php
+					endif;?>
+					
+					</div>
+					</div>
+					
+					<div class="view_all">
+						<a href="<?php echo $categoryHelper->getCategoryUrl($category) ?>"><?php echo "VIEW ALL ".$category->getName() ?></a>
+					    <i class="fa fa-arrow-right"></i>
+					</div>
+				</div>
+					<?php
+					endforeach;
+					 
+				?>
+			
+	
+</div>

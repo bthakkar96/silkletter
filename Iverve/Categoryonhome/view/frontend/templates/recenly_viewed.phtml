@@ -1,0 +1,185 @@
+<?php ob_start(); ?>
+<div class="smallbbanner">
+		<a href="#">
+			<img src="/graphics/homepage/img/home/banner2_fp600cm.jpg">
+		</a>
+	</div>
+	<div class="headno1">CUSTOM FANNY PACKS</div>
+
+<?php $FANNY = ob_get_clean(); ?>
+
+<?php ob_start(); ?>
+
+	<div class="smallbbanner">
+		<a href="#">
+			<img src="/graphics/homepage/img/home/banner2_fp600cm.jpg">
+		</a>
+	</div>
+	<div class="headno1">H2GO FORCE</div>
+
+<?php $H2GO = ob_get_clean(); ?>
+
+<?php ob_start(); ?>
+
+	<div class="smallbbanner">
+		<a href="#">
+			<img src="/graphics/homepage/img/home/banner2_fp600cm.jpg">
+		</a>
+	</div>
+	<div class="headno1">CUSTOM T-SHIRTS</div>
+
+<?php $Tshirts = ob_get_clean(); ?>
+
+<?php ob_start(); ?>
+
+	<div class="smallbbanner">
+		<a href="#">
+			<img src="/graphics/homepage/img/home/banner2_fp600cm.jpg">
+		</a>
+	</div>
+	<div class="headno1">H2GO WIDE BOTTLE</div>
+
+<?php $WIDE = ob_get_clean(); ?>
+
+<?php ob_start(); ?>
+
+	<div class="smallbbanner">
+		<a href="#">
+			<img src="/graphics/homepage/img/home/banner2_fp600cm.jpg">
+		</a>
+	</div>
+	<div class="headno1">6' TABLECLOTH</div>
+
+<?php $TABLECLOTH = ob_get_clean(); ?>
+
+<?php ob_start(); ?>
+
+	<div class="smallbbanner">
+		<a href="#">
+			<img src="/graphics/homepage/img/home/banner2_fp600cm.jpg">
+		</a>
+	</div>
+	<div class="headno1">INSULATED TUMBLERS</div>
+
+<?php $TUMBLERS = ob_get_clean(); ?>
+
+<?php ob_start(); ?>
+
+	<div class="smallbbanner">
+		<a href="#">
+			<img src="/graphics/homepage/img/home/banner2_fp600cm.jpg">
+		</a>
+	</div>
+	<div class="headno1">CUSTOM PORTFOLIOS</div>
+
+<?php $PORTFOLIOS = ob_get_clean(); ?>
+
+<?php ob_start(); ?>
+
+	<div class="smallbbanner">
+		<a href="#">
+			<img src="/graphics/homepage/img/home/banner2_fp600cm.jpg">
+		</a>
+	</div>
+	<div class="headno1">SECURITY WEBCAM COVER</div>
+
+<?php $WEBCAM = ob_get_clean(); ?>
+
+
+
+<div class="row recently_viewed">
+	<div class="col-xs-6 col-sm-4">
+		<div class="featuredImg">
+			<a href="<?php echo $this->getUrl('bags/backpacks/school-backpacks/'); ?>">
+				<img src="pub/media/brands/banner1_backpacks.jpg" alt="Custom School Backpacks" class="spaceInLeft wow magictime" style="visibility: visible; animation-name: spaceInLeft;">
+			</a>
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-8">
+
+		<?php
+		$data = $this->getMostRecentlyViewed(); 
+		$count = 0;
+		foreach($data as $product){?>
+			<div class="col-xs-12 col-sm-3">
+				<a href="<?php echo $product['url_key'];?>.html">
+					<img src="<?php echo $product['small_image'];?>">
+					<?php echo $product['name']; ?>
+				</a>
+							
+			</div>
+		<?php  $count++;}
+			if($count==1){?>
+				
+					<div class="col-xs-12 col-sm-3"><?php echo $FANNY; ?></div>
+					<div class="col-xs-12 col-sm-3"><?php echo $H2GO;?></div>
+					<div class="col-xs-12 col-sm-3"><?php echo $Tshirts;?></div>
+					<div class="col-xs-12 col-sm-3"><?php echo $WIDE;?></div>
+					<div class="col-xs-12 col-sm-3"><?php echo $TABLECLOTH;?></div>
+					<div class="col-xs-12 col-sm-3"><?php echo $TUMBLERS;?></div>
+					<div class="col-xs-12 col-sm-3"><?php echo $PORTFOLIOS;?></div>
+					<?php	
+			}
+			
+			elseif($count==2){?>
+				
+					<div class="col-xs-12 col-sm-3"><?php echo $FANNY; ?></div>
+					<div class="col-xs-12 col-sm-3"><?php echo $H2GO;?></div>
+					<div class="col-xs-12 col-sm-3"><?php echo $Tshirts;?></div>
+					<div class="col-xs-12 col-sm-3"><?php echo $WIDE;?></div>
+					<div class="col-xs-12 col-sm-3"><?php echo $TABLECLOTH;?></div>
+					<div class="col-xs-12 col-sm-3"><?php echo $TUMBLERS;?></div>
+					<?php	
+			}
+			elseif($count==3){?>
+				
+					<div class="col-xs-12 col-sm-3"><?php echo $FANNY; ?></div>
+					<div class="col-xs-12 col-sm-3"><?php echo $H2GO;?></div>
+					<div class="col-xs-12 col-sm-3"><?php echo $Tshirts;?></div>
+					<div class="col-xs-12 col-sm-3"><?php echo $WIDE;?></div>
+					<div class="col-xs-12 col-sm-3"><?php echo $TABLECLOTH;?></div>
+					<?php	
+			}
+			elseif($count==4){?>
+				
+					<div class="col-xs-12 col-sm-3"><?php echo $FANNY; ?></div>
+					<div class="col-xs-12 col-sm-3"><?php echo $H2GO;?></div>
+					<div class="col-xs-12 col-sm-3"><?php echo $Tshirts;?></div>
+					<div class="col-xs-12 col-sm-3"><?php echo $WIDE;?></div>
+					<?php	
+			}
+			elseif($count==5){?>
+				
+					<div class="col-xs-12 col-sm-3"><?php echo $FANNY; ?></div>
+					<div class="col-xs-12 col-sm-3"><?php echo $H2GO;?></div>
+					<div class="col-xs-12 col-sm-3"><?php echo $Tshirts;?></div>
+					<?php	
+			}
+			elseif($count==6){?>
+				
+					<div class="col-xs-12 col-sm-3"><?php echo $FANNY; ?></div>
+					<div class="col-xs-12 col-sm-3"><?php echo $H2GO;?></div>
+					<?php	
+			}
+			elseif($count==7){?>
+				
+					<div class="col-xs-12 col-sm-3"><?php echo $FANNY; ?></div>
+					<?php	
+			}
+		if($count==0){
+			?>
+		<div class="col-xs-12 col-sm-3"><?php echo $FANNY; ?></div>
+		<div class="col-xs-12 col-sm-3"><?php echo $H2GO;?></div>
+		<div class="col-xs-12 col-sm-3"><?php echo $Tshirts;?></div>
+		<div class="col-xs-12 col-sm-3"><?php echo $WIDE;?></div>
+		<div class="col-xs-12 col-sm-3"><?php echo $TABLECLOTH;?></div>
+		<div class="col-xs-12 col-sm-3"><?php echo $TUMBLERS;?></div>
+		<div class="col-xs-12 col-sm-3"><?php echo $PORTFOLIOS;?></div>
+		<div class="col-xs-12 col-sm-3"><?php echo $WEBCAM;?></div>
+			
+		<?php
+		}
+	?>
+	
+	</div>
+</div>
